@@ -39,7 +39,7 @@ KateProjectInfoViewCodeAnalysis::KateProjectInfoViewCodeAnalysis(KateProjectPlug
     , m_toolInfoLabel(new QLabel(this))
     , m_diagnosticProvider(new DiagnosticsProvider(pluginView->mainWindow(), this))
 {
-    m_diagnosticProvider->setObjectName(QStringLiteral("CodeAnalysisDiagnosticProvider"));
+    m_diagnosticProvider->setObjectName(QLatin1StringView("CodeAnalysisDiagnosticProvider"));
     m_diagnosticProvider->name = i18nc("'%1' refers to project name, e.g,. Code Analysis - MyProject", "Code Analysis - %1", project->name());
 
     // We don't want the diagnostics to be cleared automatically if a file closes

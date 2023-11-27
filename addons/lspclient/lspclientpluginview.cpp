@@ -644,7 +644,7 @@ public:
         // sync with plugin settings if updated
         connect(m_plugin, &LSPClientPlugin::update, this, &self_type::configUpdated);
 
-        m_diagnosticProvider.setObjectName(QStringLiteral("LSPDiagnosticProvider"));
+        m_diagnosticProvider.setObjectName(QLatin1StringView("LSPDiagnosticProvider"));
         connect(&m_diagnosticProvider, &DiagnosticsProvider::requestFixes, this, &self_type::fixDiagnostic);
         connect(&m_textHintprovider, &KateTextHintProvider::textHintRequested, this, &self_type::onTextHint);
 

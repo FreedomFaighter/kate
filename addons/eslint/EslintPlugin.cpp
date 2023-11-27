@@ -38,7 +38,7 @@ ESLintPluginView::ESLintPluginView(KTextEditor::MainWindow *mainWin)
     , m_mainWindow(mainWin)
     , m_provider(mainWin, this)
 {
-    m_provider.setObjectName(QStringLiteral("ESLintDiagnosticProvider"));
+    m_provider.setObjectName(QLatin1StringView("ESLintDiagnosticProvider"));
     m_provider.name = i18n("ESLint");
 
     connect(mainWin, &KTextEditor::MainWindow::viewChanged, this, &ESLintPluginView::onActiveViewChanged);

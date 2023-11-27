@@ -127,7 +127,7 @@ KateSaveModifiedDialog::KateSaveModifiedDialog(QWidget *parent, const std::vecto
     const bool multipleDocuments = documents.size() != 1;
 
     setWindowTitle(multipleDocuments ? i18n("Save Documents") : i18n("Close Document"));
-    setObjectName(QStringLiteral("KateSaveModifiedDialog"));
+    setObjectName(QLatin1StringView("KateSaveModifiedDialog"));
     setModal(true);
 
     auto *wrapperLayout = new QGridLayout;

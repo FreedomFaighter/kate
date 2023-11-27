@@ -43,7 +43,7 @@ KateViewManager::KateViewManager(QWidget *parentW, KateMainWindow *parent)
     , m_minAge(0)
     , m_guiMergedView(nullptr)
 {
-    setObjectName(QStringLiteral("KateViewManager"));
+    setObjectName(QLatin1StringView("KateViewManager"));
 
     // start in home if we are not started from a terminal
     m_lastOpenDialogUrl =

@@ -22,7 +22,7 @@ KateBookmarkHandler::KateBookmarkHandler(KateFileBrowser *parent, QMenu *kpopupm
     , mParent(parent)
     , m_menu(kpopupmenu)
 {
-    setObjectName(QStringLiteral("KateBookmarkHandler"));
+    setObjectName(QLatin1StringView("KateBookmarkHandler"));
     if (!m_menu) {
         m_menu = new QMenu(parent);
     }

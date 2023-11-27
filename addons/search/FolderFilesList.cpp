@@ -19,7 +19,7 @@ FolderFilesList::FolderFilesList(QObject *parent)
     : QThread(parent)
 {
     // ensure we have a proper thread name during e.g. perf profiling
-    setObjectName(QStringLiteral("FolderFilesList"));
+    setObjectName(QLatin1StringView("FolderFilesList"));
 }
 
 FolderFilesList::~FolderFilesList()

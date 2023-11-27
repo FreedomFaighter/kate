@@ -18,7 +18,7 @@ SearchDiskFiles::SearchDiskFiles(SearchDiskFilesWorkList &worklist, const QRegul
     , m_includeBinaryFiles(includeBinaryFiles)
 {
     // ensure we have a proper thread name during e.g. perf profiling
-    setObjectName(QStringLiteral("SearchDiskFiles"));
+    setObjectName(QLatin1StringView("SearchDiskFiles"));
 }
 
 void SearchDiskFiles::run()

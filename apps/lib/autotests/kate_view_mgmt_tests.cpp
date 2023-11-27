@@ -279,7 +279,7 @@ void KateViewManagementTests::testTabLRUWithWidgets()
 
     // Add a widget
     QWidget *widget = new QWidget;
-    widget->setObjectName(QStringLiteral("widget"));
+    widget->setObjectName(QLatin1StringView("widget"));
     Utils::addWidget(widget, app->activeMainWindow());
     QCOMPARE(vs->currentWidget(), widget);
     // There should be no activeView
