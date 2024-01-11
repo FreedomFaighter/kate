@@ -8,7 +8,8 @@
 
 #include <QString>
 #include <QUrl>
-#include <QWidgetList>
+#include <QList>
+#include <QWidget>
 
 QT_BEGIN_NAMESPACE
 class QScrollBar;
@@ -96,7 +97,7 @@ KATE_PRIVATE_EXPORT void activateWidget(QWidget *widget, KTextEditor::MainWindow
 /// TODO: Maybe it would be more versatile to return *all* widgets, including KTextEditor::Views, here, or perhaps
 ///       controlled by a flag to filter which widgets to return. Think e.g. about the document switching plugin.
 ///       activeWidget() (not yet "public") uses those semantics, already.
-KATE_PRIVATE_EXPORT QWidgetList widgets(KTextEditor::MainWindow *mainWindow);
+KATE_PRIVATE_EXPORT QList<Widget> widgets(KTextEditor::MainWindow *mainWindow);
 
 KATE_PRIVATE_EXPORT void insertWidgetInStatusbar(QWidget *widget, KTextEditor::MainWindow *mainWindow);
 
