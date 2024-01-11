@@ -15,6 +15,8 @@
 #include <QPointer>
 #include <QScrollBar>
 #include <QVariant>
+#include <QList>
+#include <QWidget>
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -190,10 +192,10 @@ void activateWidget(QWidget *widget, KTextEditor::MainWindow *mainWindow)
     QMetaObject::invokeMethod(mainWindow->parent(), "activateWidget", Qt::DirectConnection, Q_ARG(QWidget *, widget));
 }
 
-QWidgetList widgets(KTextEditor::MainWindow *mainWindow)
+QList<Widget> widgets(KTextEditor::MainWindow *mainWindow)
 {
-    QWidgetList ret;
-    QMetaObject::invokeMethod(mainWindow->parent(), "widgets", Qt::DirectConnection, Q_RETURN_ARG(QWidgetList, ret));
+    QList<Widget> ret;
+    QMetaObject::invokeMethod(mainWindow->parent(), "widgets", Qt::DirectConnection, Q_RETURN_ARG(QList<Widget>, ret));
     return ret;
 }
 
